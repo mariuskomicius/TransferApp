@@ -4,8 +4,6 @@
 //
 //  Created by Marius on 2023-08-03.
 //
-// 4. In home scene we can see user balance (in a label), two input fields, transfer button and logout button (in total, 5 UI elements)
-// 5. In those input fields user can enter how much money he is going to transfer and for which user
 import UIKit
 
 class TransferViewController: UIViewController {
@@ -21,8 +19,6 @@ class TransferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-
-        // Do any additional setup after loading the view.
     }
     
     func configureUI() {

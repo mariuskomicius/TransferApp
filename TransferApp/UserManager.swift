@@ -12,8 +12,6 @@ class UserManager {
     var currentUser: User
     var registeredUsers: [User] = []
     
-   
-    
     init(users: [User], currentUser: User, registeredUsers: [User]) {
         self.users = users
         self.currentUser = currentUser

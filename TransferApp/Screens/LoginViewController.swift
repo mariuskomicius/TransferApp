@@ -19,17 +19,14 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     @IBOutlet weak var loginViewLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var enterButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-
     }
     
     func configureUI() {

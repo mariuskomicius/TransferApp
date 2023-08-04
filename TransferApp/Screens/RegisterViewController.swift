@@ -20,7 +20,6 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-
     }
     
     func configureUI() {
@@ -32,7 +31,6 @@ class RegisterViewController: UIViewController {
         repeatPasswordTextField.placeholder = "Repeat Password"
         registerUserButton.setTitle("Register", for: .normal)
     }
-    
     
     @IBAction func registerButtonTapped(_ sender: Any) {
         let transferViewController = TransferViewController()

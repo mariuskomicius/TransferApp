@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     
     let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")), registeredUsers: [])
     
-    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
@@ -36,7 +35,5 @@ class ViewController: UIViewController {
         let registerViewController = RegisterViewController()
         navigationController?.pushViewController(registerViewController, animated: true)
     }
-    
-    
 }
 
