@@ -39,7 +39,12 @@ class LoginViewController: UIViewController {
         enterButton.setTitle("Enter", for: .normal)
     }
 
-
+    @IBAction func enterButtonTapped(_ sender: Any) {
+        let transferViewController = TransferViewController()
+        if usernameTextField.text == "1234",
+           passwordTextField.text == "1234" {
+        };navigationController?.pushViewController(transferViewController, animated: true)
+    }
     /*
     // MARK: - Navigation
 

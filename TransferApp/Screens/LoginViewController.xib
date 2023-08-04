@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="TransferApp" customModuleProvider="target">
             <connections>
                 <outlet property="enterButton" destination="zjd-Wl-Gx8" id="FYW-Vf-oiN"/>
-                <outlet property="loginViewLabel" destination="dOj-nL-KLy" id="0x2-e6-EYf"/>
+                <outlet property="loginViewLabel" destination="dOj-nL-KLy" id="NVS-Sd-PdR"/>
                 <outlet property="passwordTextField" destination="HIz-vt-ytW" id="t2L-qq-S0L"/>
                 <outlet property="usernameTextField" destination="YLt-xA-QDU" id="b0e-AA-2iw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-nL-KLy">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOj-nL-KLy">
                     <rect key="frame" x="16" y="104" width="361" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -51,6 +51,9 @@
                         <color key="baseForegroundColor" red="0.0047777094880000004" green="0.002516284585" blue="0.19217208029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="enterButtonTapped:" destination="-1" eventType="touchUpInside" id="J4F-zd-ijY"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

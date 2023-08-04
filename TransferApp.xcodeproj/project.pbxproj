@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		299344DF2A7C138400017305 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299344DE2A7C138400017305 /* LoginViewController.swift */; };
-		299344E12A7C139000017305 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299344E02A7C139000017305 /* LoginViewController.xib */; };
+		294422722A7D72F300863FDC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299344E72A7C13F400017305 /* LoginViewController.swift */; };
+		294422732A7D72FF00863FDC /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299344E82A7C13FB00017305 /* LoginViewController.xib */; };
 		299344E42A7C13B800017305 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299344E22A7C13B800017305 /* RegisterViewController.swift */; };
 		299344E52A7C13B800017305 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 299344E32A7C13B800017305 /* RegisterViewController.xib */; };
 		29A0525E2A7C1ED9001A8B4B /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A0525C2A7C1ED9001A8B4B /* TransferViewController.swift */; };
@@ -25,12 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		299344DE2A7C138400017305 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../.Trash/LoginViewController.swift; sourceTree = "<group>"; };
-		299344E02A7C139000017305 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../../../.Trash/LoginViewController.xib; sourceTree = "<group>"; };
 		299344E22A7C13B800017305 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		299344E32A7C13B800017305 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		299344E72A7C13F400017305 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		299344E82A7C13FB00017305 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		299344E82A7C13FB00017305 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginViewController.xib; path = /Users/marius/Desktop/TransferApp/TransferApp/Screens/LoginViewController.xib; sourceTree = "<absolute>"; };
 		29A0525C2A7C1ED9001A8B4B /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		29A0525D2A7C1ED9001A8B4B /* TransferViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferViewController.xib; sourceTree = "<group>"; };
 		29A052602A7C2E70001A8B4B /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
@@ -99,8 +97,6 @@
 				29F050A32A7AFD90000E8290 /* Assets.xcassets */,
 				29F050A52A7AFD90000E8290 /* LaunchScreen.storyboard */,
 				29F050A82A7AFD90000E8290 /* Info.plist */,
-				299344DE2A7C138400017305 /* LoginViewController.swift */,
-				299344E02A7C139000017305 /* LoginViewController.xib */,
 			);
 			path = TransferApp;
 			sourceTree = "<group>";
@@ -172,9 +168,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299344E12A7C139000017305 /* LoginViewController.xib in Resources */,
 				299344E52A7C13B800017305 /* RegisterViewController.xib in Resources */,
 				29F050A72A7AFD90000E8290 /* LaunchScreen.storyboard in Resources */,
+				294422732A7D72FF00863FDC /* LoginViewController.xib in Resources */,
 				29F050A42A7AFD90000E8290 /* Assets.xcassets in Resources */,
 				29F050A22A7AFD8E000E8290 /* Main.storyboard in Resources */,
 				29A0525F2A7C1ED9001A8B4B /* TransferViewController.xib in Resources */,
@@ -188,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				299344DF2A7C138400017305 /* LoginViewController.swift in Sources */,
+				294422722A7D72F300863FDC /* LoginViewController.swift in Sources */,
 				29F0509F2A7AFD8E000E8290 /* ViewController.swift in Sources */,
 				299344E42A7C13B800017305 /* RegisterViewController.swift in Sources */,
 				29A0525E2A7C1ED9001A8B4B /* TransferViewController.swift in Sources */,

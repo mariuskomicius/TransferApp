@@ -32,7 +32,16 @@ class RegisterViewController: UIViewController {
         repeatPasswordTextField.placeholder = "Repeat Password"
         registerUserButton.setTitle("Register", for: .normal)
     }
-
+    
+    
+    @IBAction func registerButtonTapped(_ sender: Any) {
+        let transferViewController = TransferViewController()
+        if createUsernameTextField.text == "123",
+           createPasswordTextField.text == "123",
+           repeatPasswordTextField.text == "123" {
+        };navigationController?.pushViewController(transferViewController, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

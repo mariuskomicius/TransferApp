@@ -54,6 +54,9 @@
                         <color key="baseForegroundColor" red="0.0047777094880000004" green="0.002516284585" blue="0.19217208029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="registerButtonTapped:" destination="-1" eventType="touchUpInside" id="sfj-q8-7Zv"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Username must be at least 8 symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-GB-AYe">
                     <rect key="frame" x="16" y="298" width="296" height="21"/>
