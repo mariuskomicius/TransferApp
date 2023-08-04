@@ -10,6 +10,8 @@ import UIKit
 
 class TransferViewController: UIViewController {
     
+    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")), registeredUsers: [])
+    
     @IBOutlet weak var userBalanceLabel: UILabel!
     @IBOutlet weak var enterAmountTextField: UITextField!
     @IBOutlet weak var enterReceiversUsernameTextField: UITextField!
@@ -31,7 +33,11 @@ class TransferViewController: UIViewController {
         logoutButton.setTitle("Logout", for: .normal)
     }
 
-
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        let loginViewController = LoginViewController(userManager: userManager)
+        navigationController?.pushViewController(loginViewController, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
