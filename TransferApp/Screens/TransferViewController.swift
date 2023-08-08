@@ -8,7 +8,18 @@ import UIKit
 
 class TransferViewController: UIViewController {
     
-    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")))
+    var currentUser = User(username: "", password: "", userAccountBalance: 0.0)
+    
+    init(currentUser: User) {
+        self.currentUser = currentUser
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "", userAccountBalance: 0.0)))
     
     @IBOutlet weak var userBalanceLabel: UILabel!
     @IBOutlet weak var enterAmountTextField: UITextField!
@@ -22,7 +33,8 @@ class TransferViewController: UIViewController {
     }
     
     func configureUI() {
-        userBalanceLabel.text = "User balance"
+        updateUserBalanceLabel()
+        //userBalanceLabel.text = "User balance"
         enterAmountTextField.placeholder = "Enter amount to transfer"
         enterRecipientsUsernameTextField.placeholder = "Enter recipients username"
         transferButton.setTitle("Transfer", for: .normal)
@@ -50,6 +62,10 @@ class TransferViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
         }
+    
+    func updateUserBalanceLabel() {
+        userBalanceLabel.text = "Your balance: 200"
+    }
     
     /*
     // MARK: - Navigation

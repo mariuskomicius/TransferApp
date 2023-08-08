@@ -14,7 +14,6 @@
                 <outlet property="createUsernameTextField" destination="Ydg-ql-hIO" id="ARZ-eF-FbW"/>
                 <outlet property="passwordSymbolsLabel" destination="8KU-uc-acI" id="TSx-uN-yib"/>
                 <outlet property="registerUserButton" destination="ZS0-jY-Far" id="oNV-Fr-seo"/>
-                <outlet property="repeatPasswordTextField" destination="xh2-Ol-UZ7" id="9IR-Vx-Q6r"/>
                 <outlet property="usernameSymbolsLabel" destination="aSs-GB-AYe" id="XK8-TG-4FG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeNewUserLabel" destination="5Mb-iL-jwX" id="T3Y-rD-8Fp"/>
@@ -34,13 +33,6 @@
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00C-pJ-W8s">
                     <rect key="frame" x="16" y="409" width="361" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray2Color"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Repeat Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-Ol-UZ7">
-                    <rect key="frame" x="16" y="485" width="361" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" systemColor="systemGray2Color"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>

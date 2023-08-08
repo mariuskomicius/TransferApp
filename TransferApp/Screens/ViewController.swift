@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")))
+    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "", userAccountBalance: 0.0)))
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!

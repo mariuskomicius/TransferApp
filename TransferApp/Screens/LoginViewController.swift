@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         configureUI()
         
         if fillDemoUser1 {
-            userManager.currentUser.setDemoUser1(usernameTextField: usernameTextField, passwordTextField: passwordTextField)
+            userManager.setDemoUser1(usernameTextField: usernameTextField, passwordTextField: passwordTextField, userBalanceLabel: UILabel())
         }
     }
     
@@ -43,10 +43,10 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func enterButtonTapped(_ sender: Any) {
-        let transferViewController = TransferViewController()
-        if usernameTextField.text == "1234",
-           passwordTextField.text == "1234" {
-        };navigationController?.pushViewController(transferViewController, animated: true)
+        let transferViewController = TransferViewController(currentUser: User(username: "", password: "", userAccountBalance: 0.0))
+        //if usernameTextField.text == "1234",
+          // passwordTextField.text == "1234" {
+        ;navigationController?.pushViewController(transferViewController, animated: true)
     }
     /*
     // MARK: - Navigation

@@ -10,16 +10,16 @@ import UIKit
 
 class UserManager {
     
-    static let shared = UserManager(users: [], currentUser: User(username: "", password: ""))
+    static let shared = UserManager(users: [], currentUser: User(username: "", password: "", userAccountBalance: 0.0))
     
     var users: [User] = []
     var currentUser: User
-    // var registeredUsers: [User] = []
+    var registeredUsers: [User] = []
     
     init(users: [User], currentUser: User) {
         self.users = users
         self.currentUser = currentUser
-       // self.registeredUsers = registeredUsers
+        // self.registeredUsers = registeredUsers
     }
     
     func join(username: String, password: String) {
@@ -39,26 +39,37 @@ class UserManager {
     
     
     func createUser(username: String, password: String, userAccountBallance: Double) -> Bool {
-        var newUser = User(username: "", password: "")
+        var newUser = User(username: "", password: "", userAccountBalance: 0.0)
         users.append(newUser)
         currentUser = newUser
         return true
     }
     
-   // func registerUser(username: String, password: String) {
-     //   let user = User(username: username, password: password)
+    func registerUser(username: String, password: String) -> Bool {
+        guard username.count >= 8 && password.count >= 8 && !isUsernameUsed(username) else {
+            return false
+        }
+        
+        let newUser = User(username: username, password: password, userAccountBalance: 0.0)
+               users.append(newUser)
+               return true
+       // let user = User(username: username, password: password, userAccountBalance: 0.0)
        // registeredUsers.append(user)
-  //  }
+    }
+    
+    func isUsernameUsed(_ username: String) -> Bool {
+            return users.contains { $0.username == username }
+        }
 }
 
-extension User {
-    func setDemoUser1(usernameTextField: UITextField!, passwordTextField: UITextField!) {
+extension UserManager {
+    func setDemoUser1(usernameTextField: UITextField!, passwordTextField: UITextField!, userBalanceLabel: UILabel) {
         usernameTextField.text = "DemoUser1"
         passwordTextField.text = "DemoUser1"
-        //userBalanceLabel.text = "100.0"
+        userBalanceLabel.text = "100.0"
         
     }
-    func setDemoUser2(usernameTextField: UITextField!, passwordTextField: UITextField!, userBalanceLabel: UILabel!) {
+    func setDemoUser2(usernameTextField: UITextField!, passwordTextField: UITextField!, userBalanceLabel: UILabel) {
         usernameTextField.text = "DemoUser2"
         passwordTextField.text = "DemoUser2"
         userBalanceLabel.text = "200.0"

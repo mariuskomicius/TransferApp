@@ -9,7 +9,9 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
-    let userManager: UserManager
+    let fillDemoUser2: Bool = true
+    
+    var userManager = UserManager.shared
     init(userManager: UserManager) {
         self.userManager = userManager
         super.init(nibName: nil, bundle: nil)
@@ -24,12 +26,15 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var createUsernameTextField: UITextField!
     @IBOutlet weak var passwordSymbolsLabel: UILabel!
     @IBOutlet weak var createPasswordTextField: UITextField!
-    @IBOutlet weak var repeatPasswordTextField: UITextField!
     @IBOutlet weak var registerUserButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        if fillDemoUser2 {
+            userManager.setDemoUser2(usernameTextField: createUsernameTextField, passwordTextField: createPasswordTextField, userBalanceLabel: UILabel())
+        }
     }
     
     func configureUI() {
@@ -38,16 +43,15 @@ class RegisterViewController: UIViewController {
         createUsernameTextField.placeholder = "Create Username"
         passwordSymbolsLabel.text = "Password must be at least 8 symbols"
         createPasswordTextField.placeholder = "Create Password"
-        repeatPasswordTextField.placeholder = "Repeat Password"
         registerUserButton.setTitle("Register", for: .normal)
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        let transferViewController = TransferViewController()
-        if createUsernameTextField.text == "123",
-           createPasswordTextField.text == "123",
-           repeatPasswordTextField.text == "123" {
-        };navigationController?.pushViewController(transferViewController, animated: true)
+        let transferViewController = TransferViewController(currentUser: User(username: "", password: "", userAccountBalance: 0.0))
+        //if createUsernameTextField.text == "123",
+          // createPasswordTextField.text == "123",
+          // repeatPasswordTextField.text == "123" {
+        navigationController?.pushViewController(transferViewController, animated: true)
     }
     
 
