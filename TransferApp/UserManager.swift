@@ -36,8 +36,6 @@ class UserManager {
         }
     }
     
-    
-    
     func createUser(username: String, password: String, userAccountBallance: Double) -> Bool {
         var newUser = User(username: "", password: "", userAccountBalance: 0.0)
         users.append(newUser)
