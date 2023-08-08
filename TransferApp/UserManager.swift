@@ -22,7 +22,7 @@ class UserManager {
         // self.registeredUsers = registeredUsers
     }
     
-    func join(username: String, password: String) {
+    func login(username: String, password: String) {
         var isRegistered = false
         for user in users {
             let username = user.username
@@ -50,6 +50,7 @@ class UserManager {
         
         let newUser = User(username: username, password: password, userAccountBalance: 0.0)
                users.append(newUser)
+               currentUser = newUser
                return true
        // let user = User(username: username, password: password, userAccountBalance: 0.0)
        // registeredUsers.append(user)
