@@ -9,6 +9,16 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     
+    let userManager: UserManager
+    init(userManager: UserManager) {
+        self.userManager = userManager
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBOutlet weak var welcomeNewUserLabel: UILabel!
     @IBOutlet weak var usernameSymbolsLabel: UILabel!
     @IBOutlet weak var createUsernameTextField: UITextField!

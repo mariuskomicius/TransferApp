@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransferViewController" customModule="TransferApp" customModuleProvider="target">
             <connections>
                 <outlet property="enterAmountTextField" destination="WwV-tA-mnc" id="VRt-EZ-Y5Z"/>
-                <outlet property="enterReceiversUsernameTextField" destination="Auz-Mc-NFq" id="uU9-Ms-4w1"/>
+                <outlet property="enterRecipientsUsernameTextField" destination="Auz-Mc-NFq" id="uU9-Ms-4w1"/>
                 <outlet property="logoutButton" destination="hef-tt-1uD" id="Y3j-5P-yx9"/>
                 <outlet property="transferButton" destination="Z3z-gC-Rtj" id="sKd-JB-3FO"/>
                 <outlet property="userBalanceLabel" destination="E8Y-DR-fC9" id="Oyh-EW-ZM2"/>
@@ -52,6 +52,9 @@
                         <color key="baseForegroundColor" red="0.0047777094880000004" green="0.002516284585" blue="0.19217208029999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                     </buttonConfiguration>
+                    <connections>
+                        <action selector="transferButtonTapped:" destination="-1" eventType="touchUpInside" id="23r-4E-LPC"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hef-tt-1uD">
                     <rect key="frame" x="16" y="569" width="361" height="35"/>

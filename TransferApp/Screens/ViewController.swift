@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")), registeredUsers: [])
+    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "")))
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var loginButton: UIButton!
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {
-        let registerViewController = RegisterViewController()
+        let registerViewController = RegisterViewController(userManager: userManager)
         navigationController?.pushViewController(registerViewController, animated: true)
     }
 }

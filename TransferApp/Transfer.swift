@@ -9,5 +9,7 @@ import Foundation
 
 class Transfer {
     
+   // var userAccountBalance: Double = 0.0
+    
     
 }

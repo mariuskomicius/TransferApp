@@ -9,6 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    let fillDemoUser1: Bool = true
+    
     let userManager: UserManager
     init(userManager: UserManager) {
         self.userManager = userManager
@@ -27,6 +29,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        
+        if fillDemoUser1 {
+            userManager.currentUser.setDemoUser1(usernameTextField: usernameTextField, passwordTextField: passwordTextField)
+        }
     }
     
     func configureUI() {
