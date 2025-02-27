@@ -9,18 +9,18 @@ import UIKit
 class TransferViewController: UIViewController {
     
     var users: [User] = []
-    var currentUser = User(username: "", password: "", userAccountBalance: 0.0)
+    var currentUser = User(username: "", password: "", userAccountBalance: 200.0)
     
     init(currentUser: User) {
         self.currentUser = currentUser
-        super.init(nibName: nil, bundle: nil)
+      super.init(nibName: nil, bundle: nil)
     }
     
-    required init?(coder: NSCoder) {
+   required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
+   }
     
-    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "", userAccountBalance: 0.0)))
+    let userManager = UserManager(users: [], currentUser: (User(username: "", password: "", userAccountBalance: 200.0)))
     
     @IBOutlet weak var userBalanceLabel: UILabel!
     @IBOutlet weak var enterAmountTextField: UITextField!
@@ -31,24 +31,23 @@ class TransferViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        updateUserBalanceLabel()
     }
     
     func configureUI() {
-      //  updateUserBalanceLabel()
+        userBalanceLabel.text = "Your balance: \(currentUser.userAccountBalance)"
         enterAmountTextField.placeholder = "Enter amount to transfer"
         enterRecipientsUsernameTextField.placeholder = "Enter recipients username"
         transferButton.setTitle("Transfer", for: .normal)
         logoutButton.setTitle("Logout", for: .normal)
     }
     
-    
     @IBAction func transferButtonTapped(_ sender: Any) {
         if let amountText = enterAmountTextField.text,
            let amount = Double(amountText),
            let recipient = enterRecipientsUsernameTextField.text,
            amount > 0 {
-            transferMoney(from: currentUser, to: recipient, amount: amount)
-            updateUserBalanceLabel()
+           transferMoney(from: currentUser, to: recipient, amount: amount)
         } else {
             showAlert(message: "Incorrect name or negative amount")
         }
@@ -68,8 +67,6 @@ class TransferViewController: UIViewController {
         
         sender.userAccountBalance -= amount
         recipient.userAccountBalance += amount
-        
-        
         return .success
     }
     

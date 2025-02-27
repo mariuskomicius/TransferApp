@@ -43,7 +43,7 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func enterButtonTapped(_ sender: Any) {
-        let transferViewController = TransferViewController(currentUser: User(username: "", password: "", userAccountBalance: 0.0))
+        let transferViewController = TransferViewController(currentUser: User(username: "", password: "", userAccountBalance: 260.0))
         ;navigationController?.pushViewController(transferViewController, animated: true)
     }
 }

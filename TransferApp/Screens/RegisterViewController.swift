@@ -49,5 +49,6 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonTapped(_ sender: Any) {
         let transferViewController = TransferViewController(currentUser: User(username: "", password: "", userAccountBalance: 0.0))
         navigationController?.pushViewController(transferViewController, animated: true)
+        userManager.registerUser(username: "", password: "")
     }
 }
